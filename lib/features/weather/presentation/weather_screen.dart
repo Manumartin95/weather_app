@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/features/weather/application/get_weather_query.dart';
+import 'package:weather_app/features/weather/presentation/widgets/weather_image.dart';
 
 import '../../../core/di/dependency_injection.dart';
 import '../domain/weather.dart';
@@ -40,6 +41,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       spacing: 10,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        WeatherImage(temperature: weather.current.tempC),
                         Text(
                           weather.location.name,
                           style: Theme.of(context).textTheme.titleLarge,
