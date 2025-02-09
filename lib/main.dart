@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/core/di/dependency_injection.dart';
 import 'package:weather_app/features/weather/presentation/weather_screen.dart';
+import 'package:weather_app/styles/theme.dart';
 
 void main() {
   configureDependencies();
@@ -15,10 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: skyBlueTheme,
       home: const WeatherScreen(),
     );
   }
