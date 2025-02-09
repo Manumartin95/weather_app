@@ -1,3 +1,5 @@
+import 'package:weather_app/features/weather/domain/weather.dart';
+
 abstract class WeatherRepository{
-  getWeather(String location);
+  Weather getWeather(String location);
 }

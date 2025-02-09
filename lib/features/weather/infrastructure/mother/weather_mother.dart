@@ -1,5 +1,7 @@
+import 'package:weather_app/features/weather/domain/weather.dart';
+
 class WeatherMother {
-  static weather() {
+   static weather() {
     return {
       "location": {
         "name": "Madrid",

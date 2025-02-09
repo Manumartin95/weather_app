@@ -1,9 +1,10 @@
 import 'package:weather_app/features/weather/domain/weather_repository.dart';
-import 'package:weather_app/features/weather/infastructure/mother/weather_mother.dart';
+import '../domain/weather.dart';
+import 'mother/weather_mother.dart';
 
 class LocalWeatherRepository implements WeatherRepository {
   @override
-  getWeather(String location) {
+  Weather getWeather(String location) {
     return WeatherMother.weather();
   }
 
