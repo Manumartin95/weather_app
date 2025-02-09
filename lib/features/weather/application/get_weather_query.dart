@@ -10,7 +10,7 @@ class GetWeatherQuery implements UseCase<String, Weather> {
   GetWeatherQuery({required this.repository});
 
   @override
-  Weather call(String location) {
+  Future<Weather> call(String location) {
     return repository.getWeather(location);
   }
 }
