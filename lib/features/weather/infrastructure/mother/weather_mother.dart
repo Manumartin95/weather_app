@@ -1,5 +1,3 @@
-import 'package:weather_app/features/weather/domain/weather.dart';
-
 class WeatherMother {
    static weather() {
     return {

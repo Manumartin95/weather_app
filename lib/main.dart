@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/core/di/dependency_injection.dart';
 
 void main() {
+  configureDependencies();
   runApp(const MyApp());
 }
 
