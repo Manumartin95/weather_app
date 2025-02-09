@@ -14,6 +14,8 @@ import 'package:injectable/injectable.dart' as _i526;
 
 import '../../features/weather/application/get_weather_query.dart' as _i992;
 import '../../features/weather/domain/weather_repository.dart' as _i639;
+import '../../features/weather/infrastructure/local_weather_repository.dart'
+    as _i519;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -26,6 +28,7 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
+    gh.factory<_i639.WeatherRepository>(() => _i519.LocalWeatherRepository());
     gh.factory<_i992.GetWeatherQuery>(
         () => _i992.GetWeatherQuery(repository: gh<_i639.WeatherRepository>()));
     return this;
